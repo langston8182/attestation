@@ -117,7 +117,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+})({"../node_modules/parcel/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -149,7 +149,7 @@ function getBaseURL(url) {
 
 exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
-},{}],"../node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
+},{}],"../node_modules/parcel/src/builtins/css-loader.js":[function(require,module,exports) {
 var bundle = require('./bundle-url');
 
 function updateLink(link) {
@@ -184,18 +184,18 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"../node_modules/bootstrap/dist/css/bootstrap.min.css":[function(require,module,exports) {
+},{"./bundle-url":"../node_modules/parcel/src/builtins/bundle-url.js"}],"../node_modules/bootstrap/dist/css/bootstrap.min.css":[function(require,module,exports) {
 
         var reloadCSS = require('_css_loader');
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
       
-},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"css/main.css":[function(require,module,exports) {
+},{"_css_loader":"../node_modules/parcel/src/builtins/css-loader.js"}],"css/main.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./..\\fonts\\marianne-bold-webfont.woff2":[["marianne-bold-webfont.f8428997.woff2","fonts/marianne-bold-webfont.woff2"],"fonts/marianne-bold-webfont.woff2"],"./..\\fonts\\marianne-bold-webfont.woff":[["marianne-bold-webfont.db730b38.woff","fonts/marianne-bold-webfont.woff"],"fonts/marianne-bold-webfont.woff"],"./..\\fonts\\marianne-regular-webfont.woff2":[["marianne-regular-webfont.0529dd78.woff2","fonts/marianne-regular-webfont.woff2"],"fonts/marianne-regular-webfont.woff2"],"./..\\fonts\\marianne-regular-webfont.woff":[["marianne-regular-webfont.78905f1b.woff","fonts/marianne-regular-webfont.woff"],"fonts/marianne-regular-webfont.woff"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/@fortawesome/fontawesome-svg-core/index.es.js":[function(require,module,exports) {
+},{"./..\\fonts\\marianne-bold-webfont.woff2":[["marianne-bold-webfont.f8428997.woff2","fonts/marianne-bold-webfont.woff2"],"fonts/marianne-bold-webfont.woff2"],"./..\\fonts\\marianne-bold-webfont.woff":[["marianne-bold-webfont.db730b38.woff","fonts/marianne-bold-webfont.woff"],"fonts/marianne-bold-webfont.woff"],"./..\\fonts\\marianne-regular-webfont.woff2":[["marianne-regular-webfont.0529dd78.woff2","fonts/marianne-regular-webfont.woff2"],"fonts/marianne-regular-webfont.woff2"],"./..\\fonts\\marianne-regular-webfont.woff":[["marianne-regular-webfont.78905f1b.woff","fonts/marianne-regular-webfont.woff"],"fonts/marianne-regular-webfont.woff"],"_css_loader":"../node_modules/parcel/src/builtins/css-loader.js"}],"../node_modules/@fortawesome/fontawesome-svg-core/index.es.js":[function(require,module,exports) {
 var global = arguments[3];
 "use strict";
 
@@ -61191,9 +61191,11 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
   var attestation = (0, _jquery.default)('input[name="attestation"]:checked').val();
   (0, _form.createForm)(attestation);
   (0, _formUtil.prepareForm)();
+  (0, _jquery.default)("#checkbox-enfants").attr('checked', 'checked');
+  (0, _jquery.default)("#checkbox-travail").attr('checked', 'checked');
 });
-(0, _util.addVersion)("localversion");
-},{"bootstrap/dist/css/bootstrap.min.css":"../node_modules/bootstrap/dist/css/bootstrap.min.css","../css/main.css":"css/main.css","./icons":"js/icons.js","./check-updates":"js/check-updates.js","./form-util":"js/form-util.js","./facebook-util":"js/facebook-util.js","./util":"js/util.js","./form":"js/form.js","jquery":"../node_modules/jquery/dist/jquery.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+(0, _util.addVersion)(undefined);
+},{"bootstrap/dist/css/bootstrap.min.css":"../node_modules/bootstrap/dist/css/bootstrap.min.css","../css/main.css":"css/main.css","./icons":"js/icons.js","./check-updates":"js/check-updates.js","./form-util":"js/form-util.js","./facebook-util":"js/facebook-util.js","./util":"js/util.js","./form":"js/form.js","jquery":"../node_modules/jquery/dist/jquery.js"}],"../node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -61221,7 +61223,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52903" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53816" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -61397,5 +61399,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/main.js"], null)
+},{}]},{},["../node_modules/parcel/src/builtins/hmr-runtime.js","js/main.js"], null)
 //# sourceMappingURL=/main.fb6bbcaf.js.map
