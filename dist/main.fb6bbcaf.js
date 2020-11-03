@@ -49529,11 +49529,12 @@ function prepareInputs(formInputs, reasonInputs, reasonFieldset, reasonAlert, sn
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
+              console.log("bouton");
               event.preventDefault();
               reasons = getReasons(reasonInputs);
 
               if (reasons) {
-                _context.next = 7;
+                _context.next = 8;
                 break;
               }
 
@@ -49542,21 +49543,21 @@ function prepareInputs(formInputs, reasonInputs, reasonFieldset, reasonAlert, sn
               reasonFieldset.scrollIntoView && reasonFieldset.scrollIntoView();
               return _context.abrupt("return");
 
-            case 7:
+            case 8:
               invalid = validateAriaFields();
 
               if (!invalid) {
-                _context.next = 10;
+                _context.next = 11;
                 break;
               }
 
               return _context.abrupt("return");
 
-            case 10:
-              _context.next = 12;
+            case 11:
+              _context.next = 13;
               return (0, _pdfUtil.generatePdf)(getProfile(formInputs), reasons, _certificate.default);
 
-            case 12:
+            case 13:
               pdfBlob = _context.sent;
               creationInstant = new Date();
               creationDate = creationInstant.toLocaleDateString('fr-CA');
@@ -49571,12 +49572,13 @@ function prepareInputs(formInputs, reasonInputs, reasonFieldset, reasonAlert, sn
               }, 100);
               setTimeout(function () {
                 snackbar.classList.remove('show');
+                location.reload();
                 setTimeout(function () {
                   return snackbar.classList.add('d-none');
                 }, 500);
-              }, 6000);
+              }, 4000);
 
-            case 20:
+            case 21:
             case "end":
               return _context.stop();
           }
@@ -61223,7 +61225,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53816" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55394" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

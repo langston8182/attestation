@@ -112,8 +112,8 @@ export function prepareInputs (formInputs, reasonInputs, reasonFieldset, reasonA
   })
 
   $('#generate-btn').addEventListener('click', async (event) => {
+    console.log("bouton")
     event.preventDefault()
-
     const reasons = getReasons(reasonInputs)
     if (!reasons) {
       reasonFieldset.classList.add('fieldset-error')
@@ -142,8 +142,9 @@ export function prepareInputs (formInputs, reasonInputs, reasonFieldset, reasonA
 
     setTimeout(function () {
       snackbar.classList.remove('show')
+      location.reload()
       setTimeout(() => snackbar.classList.add('d-none'), 500)
-    }, 6000)
+    }, 4000)
   })
 }
 
